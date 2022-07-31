@@ -1,4 +1,4 @@
-# rentalpoint
+# RentalPoint
 RentalPoint is the culmination of phase 1, phase 2 and the final implementation of the car reservation system through development. The car registration application was chosen, due to it's more compelling use cases and to utimately demonstrate our knowlege of databases. RentalPoint was built on Node.js as the backend of this project, with Express.js to handle middleware and endpoints, along with Handlebars which was the templating engine used to display content. Finally, MySql is the RDMS used for the project. 
 
 ## Table of Contents
