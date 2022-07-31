@@ -1,0 +1,67 @@
+{{#if results}}
+  <div class="callout large">
+    <div class="row column text-center">
+      <h1>Quick Search - Rental Point</h1>
+      <p class="lead">These listings are based on your search criteria, login in to be able to make orders</p>
+    </div>
+  </div>
+    <div class="tabs-panel is-active" id="panel1c">
+  {{#each results}}
+    <div class="row large-12 columns">
+<div class="travel-feature-card">
+  <div class="travel-feature-card-header{{#if type}} icon {{type}}-icon{{/if}}">
+    <div class="row">
+       <div class="medium-12 columns">
+         <h5 class="travel-feature-card-subtitle">{{location}}</h5>
+      </div>
+    </div>  
+  </div>
+
+  <div class="travel-feature-card-details">
+    <h6 class="travel-feature-card-date-range">Avaliability: {{avaliable_start}} - {{avaliable_end}}</h6>
+    <div class="row">
+      <div class="small-12 medium-9 columns travel-feature-card-content">
+        <div class="row">
+          <div class="small-4 medium-2 columns">
+              {{#if picture}}
+            <img class="travel-feature-card-image" src="/images/{{picture}}" alt="">
+            {{else}}
+            <img class="travel-feature-card-image" src="https://unsplash.it/600/600/?image=1081" alt="">
+            {{/if}}
+          </div>
+          <div class="small-8 medium-10 columns">
+            <h6 class="travel-feature-card-title">{{manufacturer}} {{model}} {{car_year}}</h6>
+          <p>Host: {{fname}} {{lname}}
+            <br />
+            Date Posted:
+            {{datecreated}}
+            <br />Seats:
+            {{seats}}
+            Condition:
+            {{state}}/10</p>          
+            </div>
+        </div> 
+      </div>
+
+      <div class="small-12 medium-3 columns travel-feature-card-price">
+        <h6>${{price}}</h6>
+        <p class="travel-feature-card-price-subtext">/ Day</p>
+      </div>
+    </div> 
+  </div>
+</div>
+    </div>
+  {{/each}}
+  </div>
+{{else}}
+  <div class="callout large">
+    <div class="row column text-center">
+      <h1>Search - Rental Point</h1>
+      <p class="lead">Sorry no items matching your search criteria, try another
+        search! We have other great listings on our site.</p>
+    </div>
+  </div>
+{{/if}}
+
+
+

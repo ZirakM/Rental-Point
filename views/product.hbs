@@ -1,0 +1,59 @@
+{{#if errorMessage includeZero=true}}
+<div class="callout alert">
+  <h5>{{{errorMessage}}}</h5>
+  <a href="#">Please make the necessary changes</a>
+</div>
+{{/if}}
+<div class="row align-center">
+  <div class="work-feature-block row">
+    <div class="columns medium-6">
+      {{#if results.picture}}
+        <img class="work-feature-block-image" src="/images/{{results.picture}}" alt="">
+      {{else}}
+        <img class="work-feature-block-image" src="https://unsplash.it/600/600/?image=1081" alt="">
+      {{/if}}
+    </div>
+    <div class="product-details column medium-6 center-text-for-small-only">
+      <h1>{{results.manufacturer}} {{results.model}} {{results.car_year}}</h1>
+      <p><span class="dim-text">Posted: {{results.datecreated}}</span></p>
+      <p class="product-description"><b>Details: </b><hr>
+      Host Name: {{results.fname}} {{results.lname}}<br>
+      Host Email: {{results.email}}<br>
+      Seats: {{results.seats}}<br>
+      Condition: {{results.state}} / 10<br>
+      </p>
+      <div class="row">
+        <div class="column small-12 large-6">
+        </div>
+        <div class="column small-12 large-12">
+          <form
+            action="/listings/{{results.listing_id}}"
+            method="POST"
+            class="product-option-selection"
+          >
+            <input
+              id="calendar"
+              name="calendar"
+              class="form-control"
+              placeholder="Select DateTime"
+              required
+            />
+
+        </div>
+      </div>
+      <div class="product-details-add-to-cart">
+        {{#if isAvaliable}}
+        <p><span style="color: #b43617"class="out-stock">Not Avaliable</span>
+        <span class="dim-text">(Avaliable until {{endDate}})</span></p>
+        {{else}}
+        <p><span class="in-stock">Avaliable</span>
+        <span class="dim-text">(Avaliable until {{endDate}})</span></p>
+        {{/if}}
+        <hr />
+        <p class="price">${{results.price}}/Day</p>
+        <button type="submit" class="button expanded" href="">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+</div>
+</form>

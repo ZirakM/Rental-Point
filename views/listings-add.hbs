@@ -1,0 +1,93 @@
+ <div class="callout large">
+    <div class="row column text-center">
+      <h1>Add a Listing - Rental Point</h1>
+      <p class="lead">Looking to add a listing? Fill out the following information to be able to list your vehicle.</p>
+    </div>
+  </div>
+{{#if errorMessage includeZero=true}}
+<div class="callout alert">
+  <h5>{{{errorMessage}}}</h5>
+  <a href="#">Please make the necessary changes</a>
+</div>
+{{/if}}    
+      <form action="/listings/add" method="POST" enctype="multipart/form-data" autocomplete="off"> 
+      <div class="row">
+        <fieldset class="fieldset small-8 small-centered columns">
+        <legend>Vehicle Information</legend>
+      <div class="medium-6 columns">
+        <label>Manufacturer
+          <input type="text" placeholder="Manufacturer" name="manufacturer"  />
+        </label>
+      </div>
+      <div class="medium-6 columns">
+        <label>Car Year
+          <input type="number" placeholder="Car Year" name="year" />
+        </label>
+      </div>
+      <div class="medium-6 columns">
+        <label>Model
+          <input type="text" placeholder="Model" name="model" />
+        </label>
+      </div>
+    <div class="medium-6 columns">
+        <label>Seats
+          <input type="number" placeholder="Seats" name="seats"  />
+        </label>
+    </div>
+    <div class="medium-6 columns">
+        <label>Condition (out of 10)
+          <input type="number" placeholder="Condition" name="condition" />
+        </label>
+    </div>
+
+      <div class="medium-6 columns">
+        <label>Location
+            <select name="country">
+              <option value="None">None</option>
+              <option value="Canada">Canada</option>
+              <option value="United States">United States</option>
+              <option value="Mexico">Mexico</option>
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="India">India</option>
+              <option value="China">China</option>
+            </select>
+          </label>
+      </div>
+      </fieldset>
+      </div>
+
+    
+
+  <div class="row">
+    <fieldset class="fieldset small-8 small-centered columns">
+      <legend>Listing Information</legend>
+      <div class="medium-6 columns">
+        <label>Start of Listing
+          <input type="date" placeholder="YYYY-MM-DD" name="datestart" />
+        </label>
+      </div>
+      <div class="medium-6 columns">
+        <label>End of Listing
+          <input type="date" placeholder="YYYY-MM-DD" name="dateend" />
+        </label>
+      </div>
+      <div class="medium-6 columns">
+        <label>Price
+          <input type="number" placeholder="Price" name="price" />
+        </label>
+      </div>
+      <div class="medium-6 columns">
+        <label>Image Upload
+          <input type="file" name="imageFile" accept="image/*" />
+        </label>
+      </div>
+    </fieldset>
+  </div>
+  
+  <div class="row">
+      <div class="small-5 small-centered columns">
+      <p><input type="submit" class="button expanded" value="Add Listing"></input></p>
+      </div>
+  </div>
+</form>
+

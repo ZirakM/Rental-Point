@@ -1,0 +1,68 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rental Point | Online Car Rental Service</title>
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://kit.fontawesome.com/36bd6c2fcb.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    
+{{!-- {{> navbar}} --}}
+<div
+  class="title-bar"
+  data-responsive-toggle="realEstateMenu"
+  data-hide-for="small"
+>
+  <button class="menu-icon" type="button" data-toggle></button>
+  <div class="title-bar-title">Menu</div>
+</div>
+
+<div class="top-bar" id="realEstateMenu">
+  <div class="top-bar-left">
+    <ul class="menu" data-responsive-menu="accordion">
+      <li class="menu-text">Rental Point</li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/listings">Listings</a></li>
+      <li><a href="/seller">For Sellers</a></li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <li><a href="/account">My Account</a></li>
+      {{# if loggedIn}}
+						<li><a href="/logout" class="button" class="menu-text">Logout</a></li>
+					{{else }}
+						<li><a href="/login" class="button" class="menu-text">Login</a></li>
+			{{/if}}
+      
+    </ul>
+  </div>
+</div>
+
+<br>
+{{{body}}}
+{{> footer}}
+    <script src="/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+      const config = {
+        "dateFormat": "Y-m-d",
+        "maxDate": "{{endDate}}",
+         "minDate": "{{startDate}}",
+         "disable": {{{disable}}},
+        "mode": "range",
+      };
+      flatpickr("#calendar",config);
+      console.log(config)
+    </script>
+  </body>
+</html>

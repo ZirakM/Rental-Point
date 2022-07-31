@@ -1,0 +1,62 @@
+{{#if errorMessage includeZero=true}}
+  <div class="callout alert">
+    <h5>{{{errorMessage}}}</h5>
+    <a href="#">Please try again later</a>
+  </div>
+{{/if}}
+{{#if successMessage includeZero=true}}
+  <div class="callout success">
+    <h5>{{{successMessage}}}</h5>
+    <a href="#">Thank you for your support, you can view your order in your
+      account</a>
+  </div>
+{{/if}}
+<div class="callout large">
+  <div class="row column text-center">
+    <h1>For All Your Car Rental Needs - Rental Point</h1>
+    <p class="lead">Find the perfect car to conquer any occasion. From laid back
+      city driving to exploring the great outdoors. We have a car to fit any
+      need!</p>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="medium-6 columns medium-pull-6">
+    <h2>Our Agency, our selves.</h2>
+    <p>Whether it’s an SUV for a family road trip, a pickup truck for some
+      errands, or a classic sports car for a special night out, find the perfect
+      car for all kinds of occasions and budgets on Rental Point.</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="medium-4 columns">
+    <h3>Find the perfect car</h3>
+    <p>Enter a location and date and browse the wide selection of cars shared by
+      local hosts.</p>
+  </div>
+  <div class="medium-4 columns">
+    <h3>Book your trip</h3>
+    <p>Book on the Rental Point online, choose the perfect car that suits your
+      needs, and book quick and easy! Set up your trip in minutes.</p>
+  </div>
+  <div class="medium-4 columns">
+    <h3>Hit the road</h3>
+    <p>Have the car delivered or pick it up from your host. Fast and easy, all
+      you need are the keys</p>
+  </div>
+</div>
+
+<hr />
+
+<div class="row column">
+  <ul class="vertical medium-horizontal menu expanded text-center">
+    <li><div class="stat">{{users}}</div><span>Members</span></li>
+    <li><div class="stat">{{listings}}</div><span>Listings</span></li>
+    <li><div class="stat">{{cars}}</div><span>Cars</span></li>
+
+  </ul>
+</div>
+
+<hr />

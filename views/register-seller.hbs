@@ -1,0 +1,101 @@
+  <div class="callout large">
+    <div class="row column text-center">
+      <h1>Become a Seller - Rental Point</h1>
+      <p class="lead">Share your truck, sports car, or anything in between. Listing takes seconds and signing up is free.</p>
+    </div>
+  </div>
+{{#if errorMessage includeZero=true}}
+<div class="callout alert">
+  <h5>{{{errorMessage}}}</h5>
+  <a href="#">Please make the necessary changes</a>
+</div>
+{{/if}}
+{{#if successMessage includeZero=true}}
+<div class="callout success">
+  <h5>{{{successMessage}}}</h5>
+  <a href="#">Please enter the details of your newly created account</a>
+</div>
+{{/if}}
+
+<form action="/seller" method="POST" autocomplete="off"> 
+  <div class="row">
+    <fieldset class="fieldset small-8 small-centered columns">
+      <legend>User Information</legend>
+      <div class="medium-6 columns">
+        <label>First Name
+          <input type="text" placeholder="John" name="fname"  />
+        </label>
+      </div>
+      <div class="medium-6 columns">
+        <label>Last Name
+          <input type="text" placeholder="Smith" name="lname" />
+        </label>
+      </div>
+      <div class="medium-6 columns">
+            <label>Location
+              <select name="country">
+                <option value="None">None</option>
+                <option value="Canada">Canada</option>
+                <option value="United States">United States</option>
+                <option value="Mexico">Mexico</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="India">India</option>
+                <option value="China">China</option>
+              </select>
+            </label>
+      </div>
+      <div class="large-12 columns">
+        <label>Date of Birth            
+            <input type="date" value="2001-06-01" name="date" >
+        </label>
+        </div>
+      </div>
+
+    </fieldset>
+  </div>
+
+  <div class="row">
+    <fieldset class="fieldset small-8 small-centered columns">
+      <legend>Account Information</legend>
+      <div class="medium-6 columns">
+        <label>Email
+          <input type="text" placeholder="johnsmith@gmail.com" name="email" />
+        </label>
+      </div>
+      <div class="medium-6 columns">
+        <label>Password
+          <input type="password" placeholder="Password" name="password" />
+        </label>
+      </div>
+      <div class="medium-6 columns">
+        <label>Confirm Password
+          <input type="password" placeholder="Confirm Password" name="confirm" />
+        </label>
+      </div>
+    </fieldset>
+  </div>
+
+    <div class="row">
+    <fieldset class="fieldset small-8 small-centered columns">
+      <legend>Additional Information</legend>
+      <div class="medium-6 columns">
+        <label>Phone Number
+          <input type="text" placeholder="(123)-456-7890" name="phone" />
+        </label>
+      </div>
+      <div class="medium-6 columns">
+        <label>License Number
+          <input type="text" placeholder="License Number" name="license" />
+        </label>
+      </div>
+    </fieldset>
+  </div>
+  
+  <div class="row">
+      <div class="small-5 small-centered columns">
+      <p><input type="submit" class="button expanded" value="Register"  ></input></p>
+      </div>
+  </div>
+  <p class="text-center"><a href="/register">Not sure about becoming a seller? Try being a renter.</a></p>
+</form>
+

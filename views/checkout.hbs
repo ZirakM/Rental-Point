@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="checkout-summary small-centered small-12 medium-8 columns">
+    <div class="checkout-summary-title">
+      <h5>Your Order</h5>
+    </div>
+    <form action="/listings/{{listing_id}}/checkout" method="POST">
+    <div class="checkout-summary-item">
+      <div class="item-name">
+        <p><span class="title">Vehicle: </span>{{results.manufacturer}} {{results.model}} {{results.car_year}}</p>
+        <p><span class="title">From: </span>{{from}}</p>
+        {{#if to}}
+        <p><span class="title">To: </span>{{to}}</p>
+        {{/if}}
+      </div>
+      <div class="item-price">
+        <p class="title">{{results.price}}</p>
+      </div>
+    </div>
+    <div class="checkout-summary-details">
+      <div class="left">
+        <p><strong>Per Day:</strong></p>
+        <p><strong>Charged Days: </strong></p>
+        <p><strong>Total: </strong></p>
+      </div>
+      <div class="right">
+        <p>${{results.price}}</p>
+        <p>{{days}}</p>
+        <p>${{price}}</p>
+      </div>
+    </div>
+    <button type="submit" class="button expanded">Submit Order</button>
+  </div>
+  </form>
+</div>

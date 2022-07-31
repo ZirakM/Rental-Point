@@ -1,0 +1,37 @@
+{
+  "name": "rentalpoint",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "devStart": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sujeev-Uthayakumar/rentalpoint.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sujeev-Uthayakumar/rentalpoint/issues"
+  },
+  "homepage": "https://github.com/Sujeev-Uthayakumar/rentalpoint#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-busboy": "^0.0.2",
+    "dayjs": "^1.10.7",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "express-handlebars": "^5.3.4",
+    "express-session": "^1.17.2",
+    "flatpickr": "^4.6.9",
+    "foundation-sites": "^6.7.4",
+    "mysql2": "^2.3.3-rc.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

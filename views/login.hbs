@@ -1,0 +1,38 @@
+  <div class="callout large">
+    <div class="row column text-center">
+      <h1>Login - Rental Point</h1>
+      <p class="lead">Login to your account and find the perfect car to conquer any occasion. From laid
+        back city driving to exploring the great outdoors. We have a car to fit
+        any need! Or manage and view your orders.</p>
+    </div>
+  </div>
+
+{{#if successMessage includeZero=true}}
+<div class="callout success">
+  <h5>{{{successMessage}}}</h5>
+  <a href="#">Please enter the details of your newly created account</a>
+</div>
+{{/if}}
+
+{{#if errorMessage includeZero=true}}
+<div class="callout alert">
+  <h5>{{{errorMessage}}}</h5>
+  <a href="#">Please make the necessary changes</a>
+</div>
+{{/if}}
+<div class="row">
+<div class="small-7 small-centered columns">
+
+<form class="log-in-form" action="/login" method="POST">
+  <h4 class="text-center">Log in with your email account</h4>
+  <label>Email
+    <input type="email" name="username" placeholder="somebody@example.com">
+  </label>
+  <label>Password
+    <input type="password" name="password" placeholder="Password">
+  </label>
+  <p><input type="submit" class="button expanded" value="Log in"></input></p>
+  <p class="text-center"><a href="/register">Need an account? Sign up for free.</a></p>
+</form>
+</div>
+</div>
